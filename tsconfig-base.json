@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "lib",
+    "declaration": true,
+    "inlineSourceMap": false,
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "noFallthroughCasesInSwitch": true,
+    "pretty": true,
+    "resolveJsonModule": true,
+    "rootDir": "lib",
+    "skipLibCheck": true,
+    "traceResolution": false,
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "lib": ["es6"],
+    "moduleResolution": "node",
+    "strict": true, 
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "experimentalDecorators": true, // for typeorm
+    "emitDecoratorMetadata": true // for typeorm
+  },
+  "compileOnSave": false,
+  "exclude": ["node_modules", "dist", "./index.ts"],
+}
