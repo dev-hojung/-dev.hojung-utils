@@ -1,9 +1,9 @@
 import assert from 'assert';
 import {singleConvertCamelToSnake} from '../lib/camelToSnakeCase/index.ts';
 
-describe('SingleConvertCamelToSnake', function () {  
-    it("aBC to a_b_c test", () => { 
+describe('SingleConvertCamelToSnake', () => {  
+    it("ABC to a_b_c test", () => { 
       const result = singleConvertCamelToSnake("ABC");
-      assert.equal(result, 'a_b_b');
+      assert.equal(result, 'a_b_c');
     })
 });

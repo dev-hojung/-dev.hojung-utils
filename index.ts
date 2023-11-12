@@ -1,13 +1,10 @@
 import utils from './dist'
 
 
-const snakeToCamel = utils.snakeToCamelCase({
-  ab_c_c____c_c_c_c: 'a',
-  b: [{
-    a_a: 'a',
-    a_b: 'b',
-  }]
-})
+const snakeToCamel = utils.snakeToCamelCase(["aa_cd", ["aa_cd"], {
+  "aa_bb": "a",
+  "cc_bb": ["dd_ee"]
+}])
 
 const camelToSnake = utils.camelToSnakeCase({
   abC: 'a',
