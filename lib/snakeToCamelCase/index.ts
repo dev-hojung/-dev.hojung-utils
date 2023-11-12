@@ -1,7 +1,7 @@
 import { SnakeToCamelType } from './type';
 
 export const singleConvertSnakeToCamel = (str: string) => {
-  return str.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase())
+  return str.replace(/_+([a-z])/g, (_, letter) => letter.toUpperCase())
 }
 
 const snakeToCamelCase = <T>(arg: T): SnakeToCamelType<T> => {
