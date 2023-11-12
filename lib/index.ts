@@ -1,8 +1,17 @@
-import snakeToCamelCaseObjectKey from './snakeToCamelCaseObjectKey';
-export { default as snakeToCamelCaseObjectKey } from './snakeToCamelCaseObjectKey';
+import snakeToCamelCase, {singleConvertSnakeToCamel} from './snakeToCamelCase';
+import camelToSnakeCase, {singleConvertCamelToSnake} from './camelToSnakeCase';
 
-export type { ReturnCamel } from './snakeToCamelCaseObjectKey/type'
+export { default as snakeToCamelCase } from './snakeToCamelCase';
+export { default as singleConvertSnakeToCamel } from './snakeToCamelCase';
+export { default as camelToSnakeCase } from './camelToSnakeCase';
+export { default as singleConvertCamelToSnake } from './camelToSnakeCase';
+
+export type { SnakeToCamelType } from './snakeToCamelCase/type';
+export type {CamelToSnakeType} from 'camelToSnakeCase/type';
 
 export default {
-  snakeToCamelCaseObjectKey
+  singleConvertSnakeToCamel,
+  snakeToCamelCase,
+  singleConvertCamelToSnake,
+  camelToSnakeCase,
 }
