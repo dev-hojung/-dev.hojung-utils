@@ -21,6 +21,7 @@
     "strict": true, 
     "noEmitOnError": true,
     "noImplicitAny": true,
+    "allowImportingTsExtensions": true,
     "experimentalDecorators": true, // for typeorm
     "emitDecoratorMetadata": true // for typeorm
   },
