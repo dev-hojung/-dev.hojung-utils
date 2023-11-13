@@ -1,9 +1,9 @@
-type CamelCase<S extends string> = S extends `${infer First}_${infer Rest}`
-  ? `${Lowercase<First>}${Capitalize<CamelCase<Rest>>}`
+type SnakeCase<S extends string> = S extends `${infer T}${infer U}`
+  ? `${T extends Capitalize<T> ? '_' : ''}${Lowercase<T>}${SnakeCase<U>}`
   : S;
 
 export type CamelToSnakeType<T> = T extends Array<infer U>
   ? Array<CamelToSnakeType<U>>
   : T extends object
-  ? { [K in keyof T as CamelCase<string & K>]: CamelToSnakeType<T[K]> }
+  ? { [K in keyof T as SnakeCase<string & K>]: CamelToSnakeType<T[K]> }
   : T;
