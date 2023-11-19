@@ -1,6 +1,23 @@
-import utils, { snakeToCamelCaseObjectKey } from './dist'
+import utils from './dist';
 
-console.log(utils.snakeToCamelCaseObjectKey({ab_c: 'a'}))
-console.log(snakeToCamelCaseObjectKey({
-  ab_c: 'a'
-}));
+const snakeToCamel = utils.snakeToCamelCase([
+  'aa_cd',
+  ['aa_cd'],
+  {
+    aa_bb: 'a',
+    cc_bb: ['dd_ee'],
+  },
+]);
+
+const camelToSnake = utils.camelToSnakeCase({
+  abC: 'a',
+  b: [
+    {
+      aA: 'a',
+      aB: 'b',
+    },
+  ],
+});
+
+console.log('snakeToCamel: ', snakeToCamel);
+console.log('camelToSnake: ', camelToSnake);
