@@ -19,12 +19,13 @@
     "lib": ["es6"],
     "moduleResolution": "node",
     "strict": true, 
-    "noEmitOnError": true,
+    // "noEmitOnError": true,
     "noImplicitAny": true,
-    "allowImportingTsExtensions": true,
+    // "noEmit": true,
+    // "allowImportingTsExtensions": true,
     "experimentalDecorators": true, // for typeorm
     "emitDecoratorMetadata": true // for typeorm
   },
   "compileOnSave": false,
-  "exclude": ["node_modules", "dist", "./index.ts"],
+  "exclude": ["node_modules", "dist", "./index.ts", "test"],
 }
