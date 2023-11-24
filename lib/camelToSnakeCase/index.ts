@@ -10,7 +10,7 @@ export const singleConvertCamelToSnake = (str: string) => {
   });
 };
 
-const camelToSnakeCase = <T,>(arg: T): CamelToSnakeType<T> => {
+const camelToSnakeCase = <T>(arg: T): CamelToSnakeType<T> => {
   if (Array.isArray(arg)) {
     return arg.map((item) => camelToSnakeCase(item)) as any;
   }
@@ -20,10 +20,6 @@ const camelToSnakeCase = <T,>(arg: T): CamelToSnakeType<T> => {
       const snakeKey = singleConvertCamelToSnake(key) as keyof T;
       return { ...acc, [snakeKey]: camelToSnakeCase(value) } as any;
     }, {}) as any;
-  }
-
-  if (typeof arg === 'string') {
-    return singleConvertCamelToSnake(arg) as any;
   }
 
   return arg as any;
